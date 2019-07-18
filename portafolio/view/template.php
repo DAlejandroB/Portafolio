@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Portafolio</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Open+Sans&display=swap">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+        <style>
+            body, html ,h1, h2,ul , img , header,section{
+                margin: 0px;
+                padding: 0px;
+            }
+            header, nav{
+                display: block;
+            }
+            body{
+                border-radius: 10px;
+                background-color: #d0d0d0;
+            }
+            header{
+                padding: 4% 0px;
+                background: linear-gradient(transparent,#d0d0d0);
+                background-color: #4169E1;
+                height: 100px;
+                color: #0f0f0f;
+                border-radius: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: #0f0f0f;
+                transition: 0.5s;
+            }
+            header a:hover{
+                color: #4169E1;
+                font-size: 20px;
+                transition: 0.5s;
+            }
+            h1{
+                font-family: "Open Sans";
+                font-size: 3vw;
+            }
+            header h1{
+                padding-left: 60%;
+            }
+            header h2{
+                font-size: 2vw;
+                padding-left: 62%;
+                font-family: sans-serif;
+                color: #5f5f5f;
+            }
+            nav{
+                width: 97%;
+                height: 50px;
+                border-radius: 3em;
+                padding-left: 40px;
+                background-image: linear-gradient(#404040, #4169E1, #404040);
+            }
+            .rostro{
+                width: 150px;
+                height: 150px;
+                float: right;
+                margin-right: 20px;
+                margin-top: auto;
+                background:
+                url("images/rostro.png");
+                background-size: cover;
+                transition: 0.5s;
+                filter: blur(8px);
+            }
+            .rostro:hover{
+                width: 150px;
+                height: 150px;
+                float: right;
+                margin-right: 20px;
+                margin-top: auto;
+                background:
+                url("images/rostro.png");
+                filter: none;
+                transition: 0.5s;
+                background-size: cover;
+            }
+
+            ul{	
+                width: 100%;
+                padding-top: 15px;
+                font-family: "Open Sans", cursive;
+            }
+            .info h1{
+                padding-top: 3%;
+                padding-left: 3%;
+            }
+            nav li{	
+                color: #0f0f0f;
+                display: inline-block;
+                padding: 0px 20px;
+                transition: 0.5s;
+                border-right-style: groove;
+                border-right-color: #4169E1;
+            }
+
+            li:hover{
+                color: #4169E1;
+                font-size: 20px;
+                transition: 0.5s;
+            }
+
+            p{
+                margin-left: 5%;
+                font-size: 1.5vw;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .info li{
+                position: relative;
+                display: block;
+                padding: .4em .4em .4em 2em;
+                margin: .5em 0;
+                background: linear-gradient(to right, #4169E1,transparent,transparent,transparent);
+                background-color: #ddd;
+                color: #444;
+                text-decoration: none;
+                text-align: left;
+                border-radius: .3em;
+                transition: all .3s ease-out; 
+                width: 200px;
+            }
+            .info ul{
+                margin-left: 8%;
+            }
+            .info{
+                position: absolute;
+                border-radius: 20px;
+                height: 800px;
+                width: 100%;
+                background: linear-gradient(to bottom, #4169E1,transparent,transparent);
+            }
+            .iaimg{
+                position: relative;
+                padding: 0px;
+                border-top-right-radius: 20px; 
+                border-bottom-right-radius: 20px;
+                width: 40%;
+                height: 20em;
+                float: right;
+                margin-top: 0px;
+                background:linear-gradient(to left,transparent,#d0d0d0),
+                url("images/ia.png");
+                background-size: cover;
+            }
+
+            .ulogo{
+                position: relative;
+                padding-left: 0px;
+                margin-right: 10%;
+                width: 40%;
+                height: 240px;
+                float: right;
+                margin-top: 0px;
+                background:	url("images/uptc_nobckrg.png");
+                background-size: cover;
+            }
+            input{
+                float: center;
+                display: block;
+                margin-left: auto;
+                padding-top: 0px;
+                margin-left: 50px;
+                margin-top: 30px;
+                margin-left: 35%;
+                width: 30%;
+                height: 40px;
+                border-radius: 20px;
+                padding-left: 10px;
+                background: linear-gradient(to right, #4169E1,transparent);
+                background-color: #0a0af0;
+                color: white;
+            }
+            input::placeholder{
+                color: #d0d0d0;
+                font-family: "Poppins" sans-serif;
+            }
+            .mlimg{
+                position: relative;
+                padding-left: 0px;
+                margin: 0px 30px;
+                width: 30%;
+                height: 20vw;
+                float: left;
+                margin-top: 100px;
+                background:	url("images/mlimg.jpg");
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="height: 100px">
+            <div class = rostro> </div>
+            <h1>Diego Ballesteros </h1>
+            <h2>Software Developer</h2>
+        </header>
+            <?php
+                include "modules/nav.php";
+            ?>
+        <section>
+            <?php
+
+                $controller = new Controller();
+                $controller -> enlacesPaginasControler();
+            ?>	 
+        </section>
+    </body>
+</html>
